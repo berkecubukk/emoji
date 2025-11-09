@@ -165,3 +165,6 @@ emoji-escape/
 * **No console errors or layout issues.**
 * **Positive user feedback:** “fun”, “simple”, “addictive”.
 
+
+
+New version will be developer next sprint.
