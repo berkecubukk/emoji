@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Emoji Escape</title>
+    <!-- Pixel font (Press Start 2P) -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hud">
+        <div id="score">Score: 0</div>
+        <div id="best">Best: 0</div>
+        <div id="level">Level: 1</div>
+        <div id="health" aria-hidden="true">
+          <div id="health-bar-wrap">
+            <div id="health-bar"></div>
+          </div>
+          <div id="health-text">100%</div>
+        </div>
+        <div id="shield-ui">
+          <div id="shield-timer"> </div>
+        </div>
+        <button id="pause-btn">Pause</button>
+      </header>
+
+      <main id="game-container">
+        <div id="game">
+          <!-- Star layers (parallax) - rendered behind player and falling objects -->
+          <div class="star-layer layer-1" aria-hidden="true"></div>
+          <div class="star-layer layer-2" aria-hidden="true"></div>
+          <div class="star-layer layer-3" aria-hidden="true"></div>
+
+          <div id="player" aria-hidden="true">
+            <span class="player-inner">🚀</span>
+            <div class="shield-effect"></div>
+          </div>
+          <div id="center-msg" class="center-msg hidden" aria-hidden="true"></div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+          <h1>Emoji Escape</h1>
+          <p id="start-best">Best: 0</p>
+
+          <div id="char-select" class="row">
+            <label>Choose your character</label>
+            <div class="chars">
+              <button class="char-btn" data-emoji="🚀">🚀</button>
+              <button class="char-btn" data-emoji="🐵">🐵</button>
+              <button class="char-btn" data-emoji="🐦">🐦</button>
+            </div>
+          </div>
+
+          <div id="difficulty-select" class="row">
+            <label>Difficulty</label>
+            <div class="difs">
+              <label><input type="radio" name="difficulty" value="easy"> Easy</label>
+              <label><input type="radio" name="difficulty" value="normal" checked> Normal</label>
+              <label><input type="radio" name="difficulty" value="hard"> Hard</label>
+            </div>
+          </div>
+
+          <button id="start-btn">Start Game</button>
+          <p class="hint">Use ← → or drag/touch to move</p>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+          <h2>Game Over</h2>
+          <p id="final-score">Score: 0</p>
+          <p id="final-best">Best: 0</p>
+          <button id="restart-btn">Play Again</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
