@@ -15,3 +15,5 @@ How to run:
 Notes:
 - High score is stored in `localStorage`.
 - The game is intentionally small and dependency-free. Tweak CSS/JS to polish visuals and behavior.
+
+> Developed by Berke Cubuk with the help of AI
